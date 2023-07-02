@@ -17,7 +17,9 @@ body::-webkit-scrollbar-thumb{
   /* COLORAS */
   --bg-color: rgb(12, 3, 3);
   --primary: rgb(0, 255, 255);
-  --hover: rgb(247, 14, 251);
+  --primary_modified: rgb(0, 255, 255, 0.72);
+  --hover: rgb(247, 14, 251, 0.7);
+  /* --hover: rgb(32, 37, 56); */
   /* FONTS */
   --h1-font: 2.2rem;
   --h2-font: 1.1rem;
@@ -118,7 +120,7 @@ header .navbar a:hover{
 }
 .btn{
     padding: 10px 22px;
-    background: var(--primary);
+    background: var(--primary_modified);
     color: rgb(255, 255, 255);
 }
 .btn:hover{
@@ -193,52 +195,110 @@ header .navbar a:hover{
     flex-direction: column;
     max-width: 500px;
 }
-.skills-text-h2{
+/* .skills-text-h2{
     font-weight: 600;
-}
-.skills-text p{
+} */
+/* .skills-text p{
     font-size: var(--p-font);
     margin: 1rem 0;
-}
+} */
 .skills-box{
-    position: relative;
+    display: flex;
+    /* position: relative; */
     background: #2c3e50;
     margin: 1rem 0;
-    height: 3.4rem;
+    height: 2.4rem;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    /* justify-content: space-around; */
     padding: 0 10px;
     border-radius: 10px;
-}
-.skills-box i{
-    display: flex;
-    align-items: center;
-    font-size: 20px;
-    font-weight: 600;
     color: var(--primary);
 }
-.skills-box h3{
-    margin-left: 1rem;
-    font-size: 1rem;
-    font-weight: 600;
+.skills-title
+{
+    width: 15%;
+
 }
-.percent-bar{
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    background: var(--primary);
-    height: 0.34rem;
-    border-radius: 10px;
+.skills-animation
+{
+    margin: 0px 12px;
+    border-radius: 3px;
+    background-color: var(--primary_modified);
+    height: 7px;
 }
-.hhtml-bar{
-    width:94%;
+/* ANIMATION BAR */
+#skills-animation1
+{
+    animation-name: html-animation;
+    animation-duration: 1.2s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out;
+    animation-delay: 1s;
 }
-.css-bar{
-    width: 84%;
+@keyframes html-animation {
+    from
+    {
+        width: 0%;
+    }
+    to
+    {
+        width: 70%;
+    }
 }
-.js-bar{
-    width: 65%;
+#skills-animation2
+{
+    animation-name: css-animation;
+    animation-duration: 1.2s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out;
+    animation-delay: 1s;
+}
+@keyframes css-animation {
+    from
+    {
+        width: 0%;
+    }
+    to
+    {
+        width: 64%;
+    }
+}
+#skills-animation3
+{
+    animation-name: js-animation;
+    animation-duration: 1.2s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out;
+    animation-delay: 1s;
+}
+@keyframes js-animation {
+    from
+    {
+        width: 0%;
+    }
+    to
+    {
+        width: 55%;
+    }
+}
+#skills-animation4
+{
+    animation-name: cpp-animation;
+    animation-duration: 1.2s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out;
+    animation-delay: 1s;
+}
+@keyframes cpp-animation {
+    from
+    {
+        width: 0%;
+    }
+    to
+    {
+        width: 75%;
+    }
 }
 .portfolio-content{
     display: flex;
@@ -420,14 +480,14 @@ form textarea{
         clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
     }
     header .navbar.active{
-        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 10%);
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
     }
     .navbar a{
-        margin: 1rem;
-        padding: 5rem;
+        margin: 2rem;
+        padding: 1.3rem;
         display: block;
-        background: white;
-        border-left: 4px solid white;
+        background: rgb(44, 62, 80, 0.4);
+        /* border-left: 4px solid white; */
     }
     .home{
         background:rgb(12, 3, 3);
@@ -464,4 +524,9 @@ form textarea{
     }
 }
 
-/* ANIMATING CONTACT */
+/* .p-box */
+/* {
+    box-sizing: border-box;
+    width: 100px;
+    height: 400px; */
+/* } */
